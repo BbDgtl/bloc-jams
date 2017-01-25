@@ -30,6 +30,15 @@ body {
     max-width: 64em;
 }
 
+.clearfix::before, .clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
 /* ***************MEDIA QUERIES**************** */
 /* Medium and small screens (640px) */
 @media (min-width: 640px) {
