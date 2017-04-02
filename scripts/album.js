@@ -60,6 +60,61 @@
      ]
  };
 
+ // Create a third album object in album.js. Populate the object with the same properties as the other two album objects, but provide values of your choosing.
+ var albumMadsen = {
+     title: 'Goodbye Logik',
+     artist: 'Madsen',
+     label: 'solo',
+     year: '2006',
+     albumArtUrl: 'assets/images/album_covers/madsen.jpg',
+     songs: [
+         {
+             title: 'Du Schreibst Geschichte',
+             duration: '3:11'
+        },
+         {
+             title: 'Ein Sturm',
+             duration: '3:50'
+        },
+         {
+             title: 'Piraten',
+             duration: '3:49'
+        },
+         {
+             title: 'Good Bye Logik',
+             duration: '3:44'
+        },
+         {
+             title: 'Ich Rette Die Welt',
+             duration: '3:23'
+        },
+         {
+             title: 'Unzerbrechlich',
+             duration: '3:40'
+        },
+         {
+             title: 'Ich Komme Nicht Mit',
+             duration: '3:02'
+        },
+         {
+             title: 'Der Moment',
+             duration: '4:15'
+        },
+         {
+             title: 'Happy End',
+             duration: '3:47'
+        },
+         {
+             title: 'Ein Produkt',
+             duration: '3:49'
+        },
+         {
+             title: 'Euphorie',
+             duration: '3:28'
+        }
+    ]
+ };
+
  var createSongRow = function (songNumber, songName, songLength) {
      var template =
          '<tr class="album-view-song-item">' + '  <td class="song-item-number">' + songNumber + '</td>' + '  <td class="song-item-title">' + songName + '</td>' + '  <td class="song-item-duration">' + songLength + '</td>' + '</tr>';
@@ -67,13 +122,14 @@
      return template;
  };
 
+ // #1
+ var albumTitle = document.getElementsByClassName('album-view-title')[0];
+ var albumArtist = document.getElementsByClassName('album-view-artist')[0];
+ var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
+ var albumImage = document.getElementsByClassName('album-cover-art')[0];
+ var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
+
  var setCurrentAlbum = function (album) {
-     // #1
-     var albumTitle = document.getElementsByClassName('album-view-title')[0];
-     var albumArtist = document.getElementsByClassName('album-view-artist')[0];
-     var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
-     var albumImage = document.getElementsByClassName('album-cover-art')[0];
-     var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
 
      // #2
      albumTitle.firstChild.nodeValue = album.title;
@@ -92,4 +148,15 @@
 
  window.onload = function () {
      setCurrentAlbum(albumPicasso);
+
+     var albums = [albumPicasso, albumMarconi, albumMadsen];
+     var i = 1;
+
+     albumImage.addEventListener("click", function (e) {
+         setCurrentAlbum(albums[i]);
+         i++;
+         if (i == albums.length) {
+             i = 0;
+         }
+     });
  };
