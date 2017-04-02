@@ -117,7 +117,7 @@
 
  var createSongRow = function (songNumber, songName, songLength) {
      var template =
-         '<tr class="album-view-song-item">' + '  <td class="song-item-number">' + songNumber + '</td>' + '  <td class="song-item-title">' + songName + '</td>' + '  <td class="song-item-duration">' + songLength + '</td>' + '</tr>';
+         '<tr class="album-view-song-item">' + '  <td class="song-item-number" data-song-number="' + songNumber + '</td>' + '  <td class="song-item-title">' + songName + '</td>' + '  <td class="song-item-duration">' + songLength + '</td>' + '</tr>';
 
      return template;
  };
@@ -146,8 +146,33 @@
      }
  };
 
+ var songListContainer = document.getElementsByClassName('album-view-song-list')[0];
+ var songRows = document.getElementsByClassName('album-view-song-item');
+
+ // Album button templates
+ var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
+
  window.onload = function () {
      setCurrentAlbum(albumPicasso);
+
+     songListContainer.addEventListener('mouseover', function (e) {
+         // #1
+         //console.log(e.target);
+         // Add a conditional statement to the mouseover event listener that restricts the target to the table row.
+         // Only target individual song rows during an event delegation.
+         if (e.target.parentElement.className === 'album-view-song-item') {
+             // Change the content from the number to the play button's HTML.
+             e.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
+         }
+     });
+
+     for (var i = 0; i < songRows.length; i++) {
+         songRows[i].addEventListener('mouseleave', function (e) {
+             // Revert the content back to the number.
+             // Selects first child element, which is the song-item-number element.
+             this.children[0].innerHTML = this.children[0].getAttribute('data-song-number');
+         });
+     }
 
      var albums = [albumPicasso, albumMarconi, albumMadsen];
      var i = 1;
