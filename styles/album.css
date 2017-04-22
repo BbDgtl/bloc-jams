@@ -1,10 +1,14 @@
+/* ***** CHECKPOINT 10 : ADD STYLES ***** */
+
 body.album {
     background-image: url(../assets/images/blurred_backgrounds/blur_bg_3.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
+    /* ***** CHECKPOINT 28 : ADD PADDING ***** */
     padding-bottom: 200px;
+    /* ***** END ***** */
 }
 
 .album-cover-art {
@@ -35,6 +39,9 @@ body.album {
     font-size: 0.75rem;
 }
 
+
+/* ***** CHECKPOINT 10 : ADD SONG DETAILS ***** */
+
 .album-view-song-list {
     width: 90%;
     margin: 1.5rem auto;
@@ -51,6 +58,7 @@ body.album {
 
 .song-item-number {
     width: 5%;
+    /* ***** CHECKPOINT 26 : ADD WIDTH FOR BUTTON ***** */
     min-width: 30px;
 }
 
@@ -63,7 +71,7 @@ body.album {
 }
 
 
-/* Add the CSS for the play button from Ionicons. */
+/* ***** CHECKPOINT 26 : Add the CSS for the play button from Ionicons. ***** */
 
 .album-song-button {
     text-align: center;
@@ -88,6 +96,9 @@ body.album {
 
 
 /* #2 */
+
+
+/* ***** CHECKPOINT 10 : MAKE ALBUM VIEW RESPONSIVE ***** */
 
 
 /* *********************MEDIA QUERIES********************* */
