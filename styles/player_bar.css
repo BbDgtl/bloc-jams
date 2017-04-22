@@ -18,9 +18,6 @@
     vertical-align: middle;
 }
 
-
-/* ***** END ***** */
-
 .player-bar a,
 .player-bar a:hover {
     color: white;
@@ -57,9 +54,6 @@
     margin-right: 15%;
     font-size: 1.6rem;
 }
-
-
-/* ***** END ***** */
 
 .player-bar .currently-playing {
     width: 50%;
@@ -152,12 +146,6 @@
     margin-left: -0.5rem;
 }
 
-
-/* ***** END ***** */
-
-
-/* ***** END ***** */
-
 .player-bar .volume {
     width: 25%;
     text-align: right;
@@ -210,9 +198,3 @@
         display: block;
     }
 }
-
-
-/* ***** END ***** */
-
-
-/* ***** END ***** */
