@@ -1,14 +1,14 @@
-<!-- ***** CHECKPOINT 10 : CREATE ALBUM.HTML -->
+<!-- ***** CHECKPOINT 10 : CREATE ALBUM.HTML -
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>Bloc Jams</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- ***** CHECKPOINT 28 : Link to new CSS ***** -->
+    <!-- ***** CHECKPOINT 28 : Link to new CSS ***** -
     <link rel="stylesheet" type="text/css" href="styles/player_bar.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
-    <!-- <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="styles/album.css">
@@ -24,7 +24,7 @@
             <a href="collection.html" class="navbar-link">Collection</a>
         </div>
     </nav>
-    <!-- ***** CHECKPOINT 10 : ADD ALBUM DETAILS SECTION ***** -->
+    <!-- ***** CHECKPOINT 10 : ADD ALBUM DETAILS SECTION ***** 
     <main class="album-view container narrow">
         <section class="clearfix">
             <div class="column half">
@@ -36,16 +36,16 @@
                 <h5 class="album-view-release-info">1909 Spanish Records</h5>
             </div>
         </section>
-        <!-- ***** CHECKPOINT 10 : ADD TABLE FOR SONG LISTINGS ***** -->
+        <!-- ***** CHECKPOINT 10 : ADD TABLE FOR SONG LISTINGS ***** 
         <table class="album-view-song-list">
-            <!-- ***** CHECKPOINT 25 : REMOVE STATIC ELEMENTS ***** -->
+            <!-- ***** CHECKPOINT 25 : REMOVE STATIC ELEMENTS ***** 
         </table>
     </main>
-    <!-- ***** CHECKPOINT 28 : SET UP THE MUSIC PLAYER ***** -->
+    <!-- ***** CHECKPOINT 28 : SET UP THE MUSIC PLAYER ***** 
     <section class="player-bar">
         <div class="container">
             <div class="control-group main-controls">
-                <!-- ***** CHECKPOINT 28 : ADD MAIN CONTROLS ***** -->
+                <!-- ***** CHECKPOINT 28 : ADD MAIN CONTROLS ***** 
                 <a class="previous">
                     <span class="ion-skip-backward"></span>
                 </a>
@@ -57,11 +57,11 @@
                 </a>
             </div>
             <div class="control-group currently-playing">
-                <!-- ***** CHECKPOINT 28 : ADD CURRENTLY PLAYING CONTROLS ***** -->
+                <!-- ***** CHECKPOINT 28 : ADD CURRENTLY PLAYING CONTROLS ***** 
                 <h2 class="song-name"></h2>
                 <h2 class="artist-song-mobile"></h2>
                 <h3 class="artist-name"></h3>
-                <!-- ***** CHECKPOINT 28 : ADD SEEK BAR ***** -->
+                <!-- ***** CHECKPOINT 28 : ADD SEEK BAR ***** 
                 <div class="seek-control">
                     <div class="seek-bar">
                         <div class="fill"></div>
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="control-group volume">
-                <!-- ****** CHECKPOINT 28 : ADD VOLUME CONTROLS -->
+                <!-- ****** CHECKPOINT 28 : ADD VOLUME CONTROLS 
                 <span class="icon ion-volume-high"></span>
                 <div class="seek-bar">
                     <div class="fill"></div>
@@ -81,13 +81,99 @@
             </div>
         </div>
     </section>
-    <!-- ***** CHECKPOINT 30 : ADD JQUERY ***** -->
+    <!-- ***** CHECKPOINT 30 : ADD JQUERY ***** 
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <!-- ***** CHECKPOINT 33 : ADD BUZZ ***** -->
+    <!-- ***** CHECKPOINT 33 : ADD BUZZ ***** 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js"></script>
-    <!-- ***** CHECKPOINT 32 ***** -->
+    <!-- ***** CHECKPOINT 32 ***** 
     <script src="scripts/fixtures.js"></script>
-    <!-- ***** CHECKPOINT 25 : LINK JS ***** -->
+    <!-- ***** CHECKPOINT 25 : LINK JS ***** 
+    <script src="scripts/album.js"></script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bloc Jams</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/album.css">
+    <link rel="stylesheet" type="text/css" href="styles/player_bar.css">
+</head>
+
+<body class="album">
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets/images/bloc_jams_logo.png" alt="bloc jams logo">
+        </a>
+        <div class="links-container">
+            <a href="collection.html" class="navbar-link">collection</a>
+        </div>
+    </nav>
+
+    <main class="album-view container narrow">
+        <section class="clearfix">
+            <div class="column half">
+                <img src="assets/images/album_covers/01.png" class="album-cover-art">
+            </div>
+            <div class="album-view-details column half">
+                <h2 class="album-view-title">The Colors</h2>
+                <h3 class="album-view-artist">Pablo Picasso</h3>
+                <h5 class="album-view-release-info">1909 Spanish Records</h5>
+            </div>
+        </section>
+        <table class="album-view-song-list">
+        </table>
+    </main>
+
+    <section class="player-bar">
+        <div class="container">
+            <div class="control-group main-controls">
+                <a class="previous">
+                    <span class="ion-skip-backward"></span>
+                </a>
+                <a class="play-pause">
+                    <span class="ion-play"></span>
+                </a>
+                <a class="next">
+                    <span class="ion-skip-forward"></span>
+                </a>
+            </div>
+            <div class="control-group currently-playing">
+                <h2 class="song-name"></h2>
+                <h2 class="artist-song-mobile"></h2>
+                <h3 class="artist-name"></h3>
+
+                <div class="seek-control">
+                    <div class="seek-bar">
+                        <div class="fill"></div>
+                        <div class="thumb"></div>
+                    </div>
+                    <div class="current-time">2:30</div>
+                    <div class="total-time">4:45</div>
+                </div>
+
+            </div>
+            <div class="control-group volume">
+                <span class="ion-volume-high icon"></span>
+                <div class="seek-bar">
+                    <div class="fill"></div>
+                    <div class="thumb"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <!--  need to load this before the fixtures script, which references it-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js"></script>
+    <script src="scripts/fixtures.js"></script>
     <script src="scripts/album.js"></script>
 </body>
 
