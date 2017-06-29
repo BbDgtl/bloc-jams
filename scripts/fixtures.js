@@ -1,5 +1,5 @@
-//*****************  EXAMPLE ALBUMS **********************// 
-
+//*****************  EXAMPLE ALBUMS **********************//
+//************ CHECKPOINT 33 ***************//
 var albumPicasso = {
     name: 'The Colors',
     artist: 'Pablo Picasso',
@@ -119,4 +119,3 @@ var albumMadsen = {
         }
     ]
 };
-// ******************************  END EXAMPLE ALBUMS *******************//

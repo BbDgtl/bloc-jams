@@ -1,29 +1,28 @@
 // ****** CHECKPOINT 29 ****** Refactor window.onload with the jQuery selector.
-$(window).load(function () {
-    //#1
-    if ($(window).height() > 950) {
-        animatePoints();
-    }
-    //#2
-    var scrollDistance = $('.selling-points').offset().top - $(window).height() + 200;
-    //#3
-    $(window).scroll(function (event) {
-        //#4
-        if ($(window).scrollTop() >= scrollDistance) {
-            animatePoints();
-        }
-    });
-});
-
-//#5
 var animatePoints = function () {
     var revealPoint = function () {
-        // #7
+        // Fade in and up
         $(this).css({
             opacity: 1,
             transform: 'scaleX(1) translateY(0)'
         });
     };
-    // #6
+    // Loop through each point and fadin/up
     $.each($('.point'), revealPoint);
 };
+$(window).load(function () {
+    // display selling points
+    if ($(window).height() > 950) {
+        animatePoints();
+    }
+    var scrollDistance = $('.selling-points').offset().top - $(window).height() + 200;
+    console.log(scrollDistance);
+    console.log($(window).scrollTop());
+
+    $(window).scroll(function (event) {
+
+        if ($(window).scrollTop() >= scrollDistance) {
+            animatePoints();
+        }
+    });
+});

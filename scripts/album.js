@@ -153,6 +153,7 @@ var updateSeekBarWhileSongPlays = function () {
     }
 };
 
+// ****** CHECKPOINT 33 ****** //
 var updateSeekPercentage = function ($seekBar, seekBarFillRatio) {
     var offsetXPercent = seekBarFillRatio * 100;
     offsetXPercent = Math.max(0, offsetXPercent);
@@ -165,6 +166,8 @@ var updateSeekPercentage = function ($seekBar, seekBarFillRatio) {
     });
 };
 
+
+// ****** CHECKPOINT 33 ****** //
 var setupSeekBars = function () {
     var $seekBars = $('.player-bar .seek-bar');
 
@@ -180,6 +183,8 @@ var setupSeekBars = function () {
         updateSeekPercentage($(this), seekBarFillRatio);
     });
 
+
+    // ****** CHECKPOINT 33 ****** //
     $seekBars.find('.thumb').mousedown(function (event) {
         var $seekBar = $(this).parent();
         $(document).bind('mousemove.thumb', function (event) {
@@ -302,6 +307,8 @@ var $previousButton = $('.main-controls .previous');
 var $nextButton = $('.main-controls .next');
 var $playPauseButton = $('.main-controls .play-pause');
 
+
+// ****** CHECKPINT 33 ****** //
 $(document).ready(function () {
     setCurrentAlbum(albumPicasso);
     setupSeekBars();
